@@ -365,6 +365,54 @@ image img{
     margin-bottom: 10px;
 }
 
+.wrapper2 {
+    max-width: 1200px;
+    position: relative;
+}
+
+.wrapper2 i{
+    top: 50%;
+    height: 45px;
+    width: 45px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    position: absolute;
+    text-align: center;
+    line-height: 46px;
+    background: #8749f2;
+    border-radius: 50%;
+    transform: translateY(-50%);
+
+
+}
+
+.wrapper2 i:first-child{
+    left: -23px;
+}
+
+.wrapper2 i:last-child{
+    right: -23px;
+}
+
+.wrapper2 .carousel{
+    font-size: 0px;
+    cursor: pointer; 
+    overflow: hidden;   
+    white-space: nowrap;
+}
+
+.carousel img{
+    height: 340px;
+    object-fit: cover;
+    margin-left: 14px;
+    width: calc(100/3);
+
+}
+
+.carousel img:first-child{
+    margin-left: 0px;
+
+}
 /*----about-----*/
 
 .about-info {
@@ -474,23 +522,23 @@ image img{
 
 .skill-per.html{
     animation-delay: 0.1s;
-     width: 80%;
+     width: 100%;
 }
 .skill-per.css{
     animation-delay: 0.1s;
-     width: 70%;
+     width: 100%;
 }
 .skill-per.python{
     animation-delay: 0.1s;
-     width: 70%;
+     width: 100%;
 }
 .skill-per.javascript{
     animation-delay: 0.1s;
-     width: 40%;
+     width: 100%;
 }
 .skill-per.php{
     animation-delay: 0.1s;
-     width: 80%;
+     width: 100%;
 }
 
 @keyframes progress{
@@ -631,9 +679,16 @@ image img{
     width: 100%;
 }
 
+.form-inputs{
+    display: flex;
+    gap: 1rem;
+}
+
 .input-field{
     width: 50%;
     height: 55px;
+    flex: 1;
+    min-width: 0;
     background: transparent;
     border: 2px solid #aaa;
     padding-inline: 20px;
@@ -762,7 +817,10 @@ footer{
     }
 
     .nav_menu-list{
+        display: none;
         flex-direction: column;
+        background: #222;
+        position: absolute;
     }
 
     .nav-menu-btn{
@@ -815,6 +873,10 @@ footer{
         width: 100%;
     }
 
+    .carousel img{
+        width: calc(100%/ 2);
+    }
+
     .about-info,
 
     .contact-info{
@@ -839,6 +901,10 @@ footer{
 @media only screen and (max-width: 540px) {
     .featured-name {
         font-size: 40px;
+    }
+
+    .carousel img{
+        width: 100%;
     }
 
     .project-box{
